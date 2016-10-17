@@ -15,8 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('call', 'CommsController@requestCall');
+Route::get('call', 'CommsController@startCall');
 
-Route::get('call', function() {
-   return view('credentials'); 
-});
+Route::get('wait-for-connection', 'CommsController@requestCall');
