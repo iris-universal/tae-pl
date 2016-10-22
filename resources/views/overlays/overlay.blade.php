@@ -4,7 +4,21 @@
     
     <div id="top-bar" class="bar">
         
-        Adam - Łódź
+        {{ $callerID or 'Adam - Łódź' }}
+        
+    </div>
+    
+    <div id="middle-bar" class="bar">
+        
+        <form action="/overlay" method="POST">
+            
+            <input type="text" name="caller" />
+            
+            <input type="submit" name="submit" />
+            
+            {{ csrf_field() }}
+            
+        </form>        
         
     </div>
     
