@@ -12,9 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return 'ok';
 });
 
-Route::get('call', 'CommsController@startCall');
-
-Route::get('wait-for-connection', 'CommsController@requestCall');
+Route::resource('overlay', 'OverlayController');
